@@ -1,6 +1,6 @@
 using System;
 
-namespace PetGame.Core.Logging;
+namespace GotchaFurry.Core.Logging;
 
 /// <summary>
 /// Logger pro Klasse. Erzeugen über LogManager.GetLogger&lt;T&gt;().

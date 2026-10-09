@@ -1,4 +1,4 @@
-namespace PetGame.Core.Logging;
+namespace GotchaFurry.Core.Logging;
 
 public enum LogLevel
 {

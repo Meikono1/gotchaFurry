@@ -1,4 +1,4 @@
-namespace PetGame.Core;
+namespace GotchaFurry.Core;
 
 public static class ScenePaths
 {

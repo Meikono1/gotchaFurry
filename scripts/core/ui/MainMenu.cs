@@ -1,8 +1,8 @@
 using Godot;
-using PetGame.Core;
-using PetGame.Core.Logging;
+using GotchaFurry.Core;
+using GotchaFurry.Core.Logging;
 
-namespace PetGame.UI;
+namespace GotchaFurry.UI;
 
 public partial class MainMenu : Control
 {

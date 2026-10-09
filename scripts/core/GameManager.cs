@@ -1,7 +1,8 @@
 using Godot;
-using PetGame.Core.Logging;
+using GotchaFurry.Core.Logging;
+using GotchaFurry.Pet;
 
-namespace PetGame.Core;
+namespace GotchaFurry.Core;
 
 /// <summary>
 /// Autoload. Initialisiert das Logging und verwaltet Spielstart, Laden, Szenenwechsel und Beenden.
@@ -11,6 +12,8 @@ public partial class GameManager : Node
     private static readonly GameLogger Log = LogManager.GetLogger<GameManager>();
 
     public static GameManager Instance { get; private set; }
+
+    public PetData CurrentPet { get; private set; }
 
     public override void _EnterTree()
     {
@@ -42,7 +45,11 @@ public partial class GameManager : Node
     public void StartNewGame()
     {
         Log.Info("Neues Spiel wird gestartet.");
-        // TODO: Charaktererstellung (Name, Spezies) -> neues PetData anlegen
+
+        // TODO: Charaktererstellung (Name, Spezies) – bis dahin fester Beispiel-Kobold
+        CurrentPet = PetData.CreateNew("Kobi", PetSpecies.Kobold);
+        Log.Info($"Neues Haustier erstellt: {CurrentPet}");
+
         ChangeScene(ScenePaths.Game);
     }
 

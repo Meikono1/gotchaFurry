@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Godot;
 
-namespace PetGame.Core.Logging;
+namespace GotchaFurry.Core.Logging;
 
 /// <summary>
 /// Zentrale Log-Verwaltung. Schreibt in die Konsole und in eine Datei pro Sitzung unter user://logs.

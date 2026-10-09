@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dlmya1ou7mt30"]
+
+[ext_resource type="Script" uid="uid://bj66v5xhy5ecc" path="res://scripts/core/ui/MainMenu.cs" id="1_vjtqc"]
+
+[node name="MainMenu" type="Control" unique_id=178954215]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vjtqc")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1757221362]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 26.0
+offset_right = 384.0
+offset_bottom = 352.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1332526045]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=51049902]
+layout_mode = 2
+text = "Titel"
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1287826786]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start"
+
+[node name="LoadButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1794069576]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Laden"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1852642042]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Schließen"

@@ -91,7 +91,7 @@ public static class LogManager
         string line = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] [{level,-5}] [{category}] {message}";
         if (exception != null)
         {
-            line += Environment.NewLine + exception;
+            line += System.Environment.NewLine + exception;
         }
 
         WriteToConsole(level, line);

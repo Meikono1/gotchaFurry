@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://butnpan3ji3ui"]
+
+[node name="Game" type="Node2D" unique_id=804807296]
+
+[node name="Label" type="Label" parent="." unique_id=1813136583]
+offset_left = 451.0
+offset_top = 200.0
+offset_right = 543.0
+offset_bottom = 223.0
+text = "SPIEL TODO"

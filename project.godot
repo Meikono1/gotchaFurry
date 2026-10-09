@@ -15,8 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Gotcha Furry"
+run/main_scene="uid://dlmya1ou7mt30"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://d1r7r6ly1xp4x"
 
 [dotnet]
 

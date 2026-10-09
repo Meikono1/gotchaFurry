@@ -1,0 +1,12 @@
+root = true
+
+[*]
+charset = utf-8
+
+.vs/
+bin/
+obj/
+.godot/
+*.suo
+*.csproj.user
+*.sln.docstates

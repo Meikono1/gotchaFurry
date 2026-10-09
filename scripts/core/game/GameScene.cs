@@ -3,6 +3,7 @@ using Godot;
 using GotchaFurry.Core;
 using GotchaFurry.Core.Logging;
 using GotchaFurry.Pet;
+using GotchaFurry.UI;
 
 namespace GotchaFurry.Game;
 
@@ -21,6 +22,7 @@ public partial class GameScene : Node
     private PetData _pet;
     private NeedsSimulation _simulation;
     private double _debugLogTimer;
+    private NeedsHud _hud;
 
     public override void _Ready()
     {
@@ -33,6 +35,14 @@ public partial class GameScene : Node
         }
 
         _simulation = new NeedsSimulation(_pet);
+
+        _hud = GetNodeOrNull<NeedsHud>("%NeedsHud");
+        if (_hud == null)
+        {
+            Log.Warn("NeedsHud nicht gefunden. Ist der Node als eindeutiger Name (%) markiert? Balken werden nicht angezeigt.");
+        }
+
+        _hud?.UpdateNeeds(_pet.Needs);
         Log.Info($"Spielszene geladen mit {_pet}, TimeScale={TimeScale}");
         LogNeeds();
     }
@@ -40,6 +50,7 @@ public partial class GameScene : Node
     public override void _Process(double delta)
     {
         _simulation.Tick(delta, TimeScale);
+        _hud?.UpdateNeeds(_pet.Needs);
 
         _debugLogTimer += delta;
         if (_debugLogTimer >= DebugLogIntervalSeconds)
